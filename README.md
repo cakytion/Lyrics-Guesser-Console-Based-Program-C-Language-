@@ -36,22 +36,24 @@ To apply fundamental programming concepts (Functions, Pointers, File I/O) to cre
 The program follows a modular structure, separating the Game Loop, File Reading, and Display Logic.
 
 ![System Flowchart](flowchart.png)
+### Gameplay demo
+![Gameplay](gameplay.png)
+(Figure 1: Guessing Interface - Player inputs the song title)
 
-### 💻 Code Highlight (File Traversal)
-The system uses Windows API to scan for song files in directories automatically.
+### 🚀 How to Run
+Note: This program uses windows.h, so it is designed to run on Windows.
 
-```c
-// Sample Code: Scanning for .txt files in a directory
-void AllSong(const char *path) {
-    char searchPath[MAX_PATH];
-    sprintf(searchPath, "%s\\*", path);
-    WIN32_FIND_DATA findFileData;
-    HANDLE hFind = FindFirstFile(searchPath, &findFileData);
-    
-    // Loop to find all text files
-    do {
-        if (strstr(findFileData.cFileName, ".txt") != NULL) {
-            printf("%s\n", findFileData.cFileName);
-        }
-    } while (FindNextFile(hFind, &findFileData) != 0);
-}
+Clone this repository.
+
+Compile the code:
+
+Bash
+
+gcc lyricguess.c -o lyrics_guesser.exe
+Important: Ensure you have the songs folder with international and custom subfolders in the same directory.
+
+Run the game:
+
+Bash
+
+lyrics_guesser.exe
