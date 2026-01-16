@@ -36,24 +36,34 @@ To apply fundamental programming concepts (Functions, Pointers, File I/O) to cre
 The program follows a modular structure, separating the Game Loop, File Reading, and Display Logic.
 
 ![System Flowchart](flowchart.png)
-### Gameplay demo
-![Gameplay](gameplay.png)
-(Figure 1: Guessing Interface - Player inputs the song title)
 
-### 🚀 How to Run
-Note: This program uses windows.h, so it is designed to run on Windows.
+## 📸 Gameplay Demo
 
-Clone this repository.
+![Gameplay Screen](gameplay.png)
+*(Figure 1: Guessing Interface - Player inputs the song title)*
 
-Compile the code:
+---
 
-Bash
+## 📂 Required Folder Structure
+For the program to work correctly, the directory must be structured as follows:
 
-gcc lyricguess.c -o lyrics_guesser.exe
-Important: Ensure you have the songs folder with international and custom subfolders in the same directory.
+```text
+Project_Root/
+├── lyricguess.c          # Main Source Code
+├── lyrics_guesser.exe    # Compiled Executable
+└── songs/                # Database Folder
+    ├── international/    # Folder for International songs (.txt)
+    └── custom/           # Folder for Custom songs (.txt)
 
-Run the game:
+## 🚀 How to Run
+**Note:** This program uses `windows.h`, so it is designed to run on **Windows**.
 
-Bash
-
-lyrics_guesser.exe
+1.  Compile the code:
+    ```bash
+    gcc lyricguess.c -o lyrics_guesser.exe
+    ```
+2.  **Important:** Ensure you have the `songs` folder with `international` and `custom` subfolders in the same directory.
+3.  Run the game:
+    ```bash
+    lyrics_guesser.exe
+    ```
